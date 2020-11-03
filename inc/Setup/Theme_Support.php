@@ -1,13 +1,13 @@
 <?php
 /**
- * Setup Theme class file
+ * Theme_Support class file
  *
- * @package starter-theme
+ * @package wp-starter-theme
  */
 namespace Theme\Setup;
-use \Theme\Traits\Singleton;
+use Theme\Traits\Singleton;
 
-class Setup {
+class Theme_Support {
     use Singleton;
 
     protected function __construct() {
@@ -21,7 +21,7 @@ class Setup {
     }
 
     public function setup_theme() {
-        load_theme_textdomain( 'starter-theme', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'wp-starter-theme', get_template_directory() . '/languages' );
         add_theme_support( 'automatic-feed-links' );
         add_theme_support( 'title-tag' );
         add_theme_support( 'post-thumbnails' );

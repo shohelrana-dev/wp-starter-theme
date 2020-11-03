@@ -1,5 +1,5 @@
 /*
-Theme Name: Starter Theme
+Theme Name: WP Starter Theme
 Theme URI: https://github.com/shohelrrrana
 Author: Shohel Rana
 Author URI: https://github.com/shohelrrrana
@@ -7,10 +7,11 @@ Version: 1.0.0
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: starter-theme
+Text Domain: wp-starter-theme
 Tags: custom-background, custom-logo, custom-menu, featured-images
 */
 
+/*WP Starter Css Start*/
 img {
     max-width: 100%;
 }
@@ -32,3 +33,34 @@ a {
     padding: 3.2px 8px;
     padding: 0.2rem 0.5rem;
 }
+
+.post .entry-meta {
+    font-size: 0.8rem;
+}
+
+.post .readmore {
+    border-color: #d9d9d9 #d9d9d9 #bfbfbf;
+    color: #777;
+    background-color: #FFF;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    width: 100%;
+}
+
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top:-6px;
+}
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}
+/*WP Starter Css End*/

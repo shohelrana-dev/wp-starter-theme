@@ -1,20 +1,20 @@
 <?php
-function starter_theme_import_files() {
+function wp_starter_theme_import_files() {
     return [
         [
-            'import_file_name'             => 'Starter theme demo data import',
+            'import_file_name'             => 'WP starter theme demo data import',
             'categories'                   => 'Category',
             'local_import_file'            => trailingslashit( get_template_directory() ) . '/demo-data/content.xml',
             'local_import_widget_file'     => trailingslashit( get_template_directory() ) . '/demo-data/widgets.wie',
             'local_import_customizer_file' => trailingslashit( get_template_directory() ) . '/demo-data/customizer.dat',
             'import_preview_image_url'     => get_template_directory_uri() . '/screenshot.php',
-            'import_notice'                => __( 'After you import this demo, you will have to setup the slider separately.', 'starter_theme' ),
+            'import_notice'                => __( 'After you import this demo, you will have to setup the slider separately.', 'wp_starter_theme' ),
         ],
     ];
 }
-add_filter( 'pt-ocdi/import_files', 'starter_theme_import_files' );
+add_filter( 'pt-ocdi/import_files', 'wp_starter_theme_import_files' );
 
-function starter_theme_after_import() {
+function wp_starter_theme_after_import() {
     $primary_menu = get_term_by( 'primary-menu', 'Primary Menu', 'nav_menu' );
 
     set_theme_mod( 'nav_menu_locations', ['primary-menu' => $primary_menu->term_id] );
@@ -27,4 +27,4 @@ function starter_theme_after_import() {
     update_option( 'page_for_posts', $blog_page->ID );
 
 }
-add_filter( 'pt-ocdi/after_import', 'starter_theme_after_import' );
+add_filter( 'pt-ocdi/after_import', 'wp_starter_theme_after_import' );

@@ -2,7 +2,7 @@
 /**
  * Autoload class file
  *
- * @package starter-theme
+ * @package wp-starter-theme
  */
 
  namespace Theme\Helpers;

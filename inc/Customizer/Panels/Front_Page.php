@@ -2,7 +2,7 @@
 /**
  * Front_Page class file for customizer
  *
- * @package starter-theme
+ * @package wp-starter-theme
  */
 
 namespace Theme\Customizer\Panels;
@@ -20,7 +20,7 @@ class Front_Page extends Customizer {
     public function register_panel() {
         \Kirki::add_panel( $this->panel, [
             'priority'        => 10,
-            'title'           => esc_html__( 'Front Page Sections', 'starter-theme' ),
+            'title'           => esc_html__( 'Front Page Sections', 'wp-starter-theme' ),
             'active_callback' => function () {return is_front_page();},
         ] );
     }

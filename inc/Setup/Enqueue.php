@@ -2,7 +2,7 @@
 /**
  * Enqueue class file
  *
- * @package starter-theme
+ * @package wp-starter-theme
  */
 
 namespace Theme\Setup;
@@ -23,10 +23,9 @@ class Enqueue {
 
     public function register_style() {
         wp_enqueue_style( 'google-font', '//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light', [], THEME_VERSION );
-        wp_enqueue_style( 'bootstrap', THEME_URI . '/assets/vendor/bootstrap/css/bootstrap.min.css', [], THEME_VERSION );
+        wp_enqueue_style( 'bootstrap', THEME_URI . '/assets/vendor/bootstrap/css/bootstrap.css', [], THEME_VERSION );
         wp_enqueue_style( 'font-awesome', THEME_URI . '/assets/vendor/font-awesome/css/font-awesome.min.css', [], THEME_VERSION );
-        wp_enqueue_style( 'font-awesome-all', THEME_URI . '/assets/vendor/font-awesome/css/all.min.css', [], THEME_VERSION );
-        wp_enqueue_style( 'theme-blog', THEME_URI . '/assets/css/theme-blog.css', [], THEME_VERSION );
+        wp_enqueue_style( 'main-style', THEME_URI . '/assets/css/main-style.css', [], THEME_VERSION );
         wp_enqueue_style( 'theme-style', get_stylesheet_uri(), [], THEME_VERSION );
     }
 

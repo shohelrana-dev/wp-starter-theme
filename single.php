@@ -1,40 +1,33 @@
 <?php
-    /**
-     * The single template file
-     *
-     * @package starter-theme
-     */
+/**
+ * The single template file
+ *
+ * @package wp-starter-theme
+ */
 
-    get_header();
+get_header();
 ?>
 
-<main id="primary" class="site-main">
+<?php get_template_part( 'template-parts/common/page-header' ); ?>
     <div class="container">
-		<?php if(is_home() && !is_front_page() ): ?>
-			<header class="page_header">
-				<h2 class="text-center py-3 my-5">
-					<?php single_post_title();?>
-				</h2>
-			</header>
-		<?php endif; ?>
-
-        <?php if ( have_posts() ): ?>
-            <div class="row">
-                <?php
-                    while ( have_posts() ) {
-                        the_post();
-                        get_template_part( 'template-parts/content' );
-                    }
-                ?>
-            </div>
-        <?php
-            else:
-                get_template_part( 'template-parts/content-none' );
-            endif;
-        ?>
-
+		<?php
+		if ( have_posts() ) {
+			while ( have_posts() ) {
+				the_post();
+				if ( is_singular( 'post' ) ) {
+					get_template_part( 'template-parts/content', 'single' );
+				} else {
+					get_template_part( 'template-parts/content', 'page' );
+				}
+			}
+		} else {
+			get_template_part( 'template-parts/content', 'none' );
+		}
+		if ( is_singular( 'post' ) && comments_open( get_the_ID() ) ) {
+			comments_template();
+		}
+		?>
     </div>
-</main>
 
 <?php
 get_footer();

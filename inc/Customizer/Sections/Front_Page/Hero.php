@@ -2,7 +2,7 @@
 /**
  * Hero class file for customizer
  *
- * @package starter-theme
+ * @package wp-starter-theme
  */
 
 namespace Theme\Customizer\Sections\Front_Page;
@@ -21,7 +21,7 @@ class Hero extends Front_Page {
 
     public function register_section() {
         \Kirki::add_section( $this->section, [
-            'title'    => esc_html__( 'Hero Section', 'starter-theme' ),
+            'title'    => esc_html__( 'Hero Section', 'wp-starter-theme' ),
             'panel'    => $this->panel,
             'priority' => 160,
         ] );
@@ -32,7 +32,7 @@ class Hero extends Front_Page {
     	\Kirki::add_field( $this->config, [
             'type'     => 'background',
             'settings' => 'front_page_hero_section_bg',
-            'label'    => esc_html__( 'Section Background', 'starter-theme' ),
+            'label'    => esc_html__( 'Section Background', 'wp-starter-theme' ),
             'section'  => $this->section,
             'priority' => 10,
             'default'   => [
@@ -54,7 +54,7 @@ class Hero extends Front_Page {
         \Kirki::add_field( $this->config, [
             'type'     => 'toggle',
             'settings' => 'display_section',
-            'label'    => esc_html__( 'Display Hero Section', 'starter-theme' ),
+            'label'    => esc_html__( 'Display Hero Section', 'wp-starter-theme' ),
             'section'  => $this->section,
             'option_name' => $this->option_name,
             'default'  => '1',
@@ -69,7 +69,7 @@ class Hero extends Front_Page {
         \Kirki::add_field( $this->config, [
             'type'        => 'text',
             'settings'    => 'section_title',
-            'label'       => esc_html__( 'Section title', 'starter-theme' ),
+            'label'       => esc_html__( 'Section title', 'wp-starter-theme' ),
             'section'     => $this->section,
             'option_name' => $this->option_name,
             'partial_refresh' => [

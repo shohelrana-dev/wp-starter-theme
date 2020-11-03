@@ -2,7 +2,7 @@
 /**
  * Banner class file for customizer
  *
- * @package starter-theme
+ * @package wp-starter-theme
  */
 
 namespace Theme\Customizer\Sections\Theme_Options;
@@ -21,7 +21,7 @@ class Typography extends Theme_Options {
 
     public function register_section() {
         \Kirki::add_section( $this->section, [
-            'title'    => esc_html__( 'Typography', 'starter-theme' ),
+            'title'    => esc_html__( 'Typography', 'wp-starter-theme' ),
             'panel'    => $this->panel,
             'priority' => 160,
         ] );
@@ -31,7 +31,7 @@ class Typography extends Theme_Options {
         \Kirki::add_field( $this->config, [
             'type'      => 'typography',
             'settings'  => 'body_typography',
-            'label'     => __( 'Body Text', 'starter-theme' ),
+            'label'     => __( 'Body Text', 'wp-starter-theme' ),
             'section'   => $this->section,
             'priority'  => 10,
             'default'   => [
@@ -54,7 +54,7 @@ class Typography extends Theme_Options {
         \Kirki::add_field( $this->config, [
             'type'      => 'typography',
             'settings'  => 'heading_typography',
-            'label'     => __( 'Heading text', 'starter-theme' ),
+            'label'     => __( 'Heading text', 'wp-starter-theme' ),
             'section'   => $this->section,
             'priority'  => 10,
             'default'   => [

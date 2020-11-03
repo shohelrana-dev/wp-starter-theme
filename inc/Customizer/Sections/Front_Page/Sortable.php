@@ -2,7 +2,7 @@
 /**
  * Sortable class file for customizer
  *
- * @package starter-theme
+ * @package wp-starter-theme
  */
 
 namespace Theme\Customizer\Sections\Front_Page;
@@ -20,7 +20,7 @@ class Sortable extends Front_Page {
 
     public function register_section() {
         \Kirki::add_section( $this->section, [
-            'title'    => esc_html__( 'Ordering and Visibility Sections', 'starter-theme' ),
+            'title'    => esc_html__( 'Ordering and Visibility Sections', 'wp-starter-theme' ),
             'panel'    => $this->panel,
             'priority' => 160,
         ] );
@@ -30,13 +30,13 @@ class Sortable extends Front_Page {
         \Kirki::add_field( $this->config, [
             'type'     => 'sortable',
             'settings' => 'sortable_front_page_sections',
-            'label'    => esc_html__( 'Ordering and Visibility', 'starter-theme' ),
+            'label'    => esc_html__( 'Ordering and Visibility', 'wp-starter-theme' ),
             'section'  => $this->section,
             'default'  => [
                 'hero',
             ],
             'choices'  => [
-                'hero' => esc_html__( 'Hero Section', 'starter-theme' ),
+                'hero' => esc_html__( 'Hero Section', 'wp-starter-theme' ),
             ],
         ] );
     }

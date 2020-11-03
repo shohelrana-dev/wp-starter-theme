@@ -1,1 +1,1 @@
-# starter-theme
+# wp-starter-theme

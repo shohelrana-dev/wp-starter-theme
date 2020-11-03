@@ -2,7 +2,7 @@
     /**
      * The header for our theme
      *
-     * @package starter-theme
+     * @package wp-starter-theme
      */
 ?>
 
@@ -17,5 +17,7 @@
 <?php wp_body_open(); ?>
 
 <?php get_template_part('template-parts/header/header'); ?>
+
+<main id="primary" class="site-main">
 
 

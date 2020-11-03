@@ -1,19 +1,17 @@
 <?php
-    /**
-     * The single template file
-     *
-     * @package starter-theme
-     */
-    if ( !is_active_sidebar( 'blog-sidebar' ) || !is_active_sidebar( 'shop-sidebar' ) ) {
-        return;
-    }
+/**
+ * The single template file
+ *
+ * @package wp-starter-theme
+ */
 ?>
 <aside class="sidebar">
-    <?php
-        if ( is_active_sidebar( 'blog-sidebar' ) && is_home() ) {
-            dynamic_sidebar( 'blog-sidebar' );
-        } elseif ( is_active_sidebar( 'shop-sidebar' ) && is_shop() ) {
-            dynamic_sidebar( 'shop-sidebar' );
-        }
-    ?>
+	<?php
+	if ( is_active_sidebar( 'BLOG_SIDEBAR' ) && is_home() ) {
+		dynamic_sidebar( 'BLOG_SIDEBAR' );
+	}
+	if ( is_active_sidebar( 'SHOP_SIDEBAR' ) && function_exists( 'is_shop' ) && is_shop() ) {
+		dynamic_sidebar( 'SHOP_SIDEBAR' );
+	}
+	?>
 </aside>
