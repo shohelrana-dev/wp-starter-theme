@@ -10,27 +10,27 @@
     <div class="container">
         <div class="row">
 
-			<?php if ( is_active_sidebar( 'FOOTER-ONE' ) ): ?>
+			<?php if ( is_active_sidebar( 'footer-one' ) ): ?>
                 <div class="col-md-6 col-lg-3">
-					<?php dynamic_sidebar( 'FOOTER-ONE' ); ?>
+					<?php dynamic_sidebar( 'footer-one' ); ?>
                 </div>
 			<?php endif; ?>
 
-			<?php if ( is_active_sidebar( 'FOOTER-TWO' ) ): ?>
+			<?php if ( is_active_sidebar( 'footer-two' ) ): ?>
                 <div class="col-md-6 col-lg-3">
-					<?php dynamic_sidebar( 'FOOTER-TWO' ); ?>
+					<?php dynamic_sidebar( 'footer-two' ); ?>
                 </div>
 			<?php endif; ?>
 
-			<?php if ( is_active_sidebar( 'FOOTER-THREE' ) ): ?>
+			<?php if ( is_active_sidebar( 'footer-three' ) ): ?>
                 <div class="col-md-6 col-lg-3">
-					<?php dynamic_sidebar( 'FOOTER-THREE' ); ?>
+					<?php dynamic_sidebar( 'footer-three' ); ?>
                 </div>
 			<?php endif; ?>
 
-			<?php if ( is_active_sidebar( 'FOOTER-FOUR' ) ): ?>
+			<?php if ( is_active_sidebar( 'footer-four' ) ): ?>
                 <div class="col-md-6 col-lg-3">
-					<?php dynamic_sidebar( 'FOOTER-FOUR' ); ?>
+					<?php dynamic_sidebar( 'footer-four' ); ?>
                 </div>
 			<?php endif; ?>
 
