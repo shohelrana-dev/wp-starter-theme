@@ -6,13 +6,13 @@
  */
 
 get_header();
-$is_active_blog_sidebar = is_active_sidebar( 'BLOG_SIDEBAR' )
+$is_active_blog_sidebar = is_active_sidebar( 'blog-sidebar' );
 ?>
 
 <?php get_template_part( 'template-parts/common/page-header' ); ?>
     <div class="container">
         <div class="row">
-            <div class="col-md-<?php echo $is_active_blog_sidebar ? 8 : 12; ?> col-sm-12">
+            <div class="col-md-<?php echo is_home() && $is_active_blog_sidebar ? 8 : 12; ?> col-sm-12">
 				<?php if ( have_posts() ): ?>
                     <div class="row post-container">
 						<?php while ( have_posts() ): the_post(); ?>
@@ -39,7 +39,7 @@ $is_active_blog_sidebar = is_active_sidebar( 'BLOG_SIDEBAR' )
 				?>
 
             </div>
-			<?php if ( $is_active_blog_sidebar ): ?>
+			<?php if ( is_home() && $is_active_blog_sidebar ): ?>
                 <div class="col-lg-4 col-md-4 col-sm-12">
 					<?php get_sidebar(); ?>
                 </div>

@@ -24,64 +24,64 @@ class Sidebars {
 	public function register_sidebars () {
 		register_sidebar( [
 			'name'          => __( 'Blog Sidebar', 'wp-starter-theme' ),
-			'id'            => 'BLOG_SIDEBAR',
+			'id'            => 'blog-sidebar',
 			'description'   => __( 'Widgets in this area will be shown on blog page.', 'wp-starter-theme' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widgettitle">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h5 class="widgettitle">',
+			'after_title'   => '</h5>',
 		] );
 
 		if ( class_exists( 'WooCommerce' ) ) {
 			register_sidebar( [
 				'name'          => __( 'Shop Sidebar', 'wp-starter-theme' ),
-				'id'            => 'SHOP_SIDEBAR',
+				'id'            => 'shop-sidebar',
 				'description'   => __( 'Widgets in this area will be shown on shop page.', 'wp-starter-theme' ),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
-				'before_title'  => '<h3 class="widgettitle">',
-				'after_title'   => '</h3>',
+				'before_title'  => '<h5 class="widgettitle">',
+				'after_title'   => '</h5>',
 			] );
 		}
 
 		register_sidebar( [
 			'name'          => __( 'Footer #1', 'wp-starter-theme' ),
-			'id'            => 'FOOTER_ONE',
+			'id'            => 'footer-one',
 			'description'   => __( 'Widgets in this area will be footer on page.', 'wp-starter-theme' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widgettitle">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h5 class="widgettitle">',
+			'after_title'   => '</h5>',
 		] );
 
 		register_sidebar( [
 			'name'          => __( 'Footer #2', 'wp-starter-theme' ),
-			'id'            => 'FOOTER_TWO',
+			'id'            => 'footer-two',
 			'description'   => __( 'Widgets in this area will be footer on page.', 'wp-starter-theme' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widgettitle">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h5 class="widgettitle">',
+			'after_title'   => '</h5>',
 		] );
 
 		register_sidebar( [
 			'name'          => __( 'Footer #3', 'wp-starter-theme' ),
-			'id'            => 'FOOTER_THREE',
+			'id'            => 'footer-three',
 			'description'   => __( 'Widgets in this area will be footer on page.', 'wp-starter-theme' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widgettitle">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h5 class="widgettitle">',
+			'after_title'   => '</h5>',
 		] );
 
 		register_sidebar( [
 			'name'          => __( 'Footer #4', 'wp-starter-theme' ),
-			'id'            => 'FOOTER_FOUR',
+			'id'            => 'footer-four',
 			'description'   => __( 'Widgets in this area will be footer on page.', 'wp-starter-theme' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widgettitle">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h5 class="widgettitle">',
+			'after_title'   => '</h5>',
 		] );
 	}
 }
