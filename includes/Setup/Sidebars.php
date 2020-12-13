@@ -13,11 +13,6 @@ class Sidebars {
 	use Singleton;
 
 	protected function __construct () {
-		$this->setup_hooks();
-	}
-
-	public function setup_hooks () {
-		//Action
 		add_action( 'widgets_init', [ $this, 'register_sidebars' ] );
 	}
 

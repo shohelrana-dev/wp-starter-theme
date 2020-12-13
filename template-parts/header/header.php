@@ -5,9 +5,7 @@
  * @package wp-starter-theme
  */
 
-use Theme\Setup\Menus;
-
-$header_menu_items = Menus::get_nav_menu_items_by_location( 'HEADER_MENU' );
+$header_menu_items = get_nav_menu_items_by_location( 'HEADER_MENU' );
 ?>
 <!--header start-->
 <header class="app-header">
@@ -33,7 +31,7 @@ $header_menu_items = Menus::get_nav_menu_items_by_location( 'HEADER_MENU' );
 					<?php if ( is_array( $header_menu_items ) && ! empty( $header_menu_items ) ): ?>
 						<?php
 						foreach ( $header_menu_items as $menu_item ):
-							$child_menu_items = Menus::get_child_menu_items( $header_menu_items, $menu_item->ID );
+							$child_menu_items = get_child_menu_items( $header_menu_items, $menu_item->ID );
 							?>
 							<?php if ( empty( $child_menu_items ) && intval( $menu_item->menu_item_parent ) === 0 ): ?>
                             <li class="nav-item">
@@ -44,7 +42,8 @@ $header_menu_items = Menus::get_nav_menu_items_by_location( 'HEADER_MENU' );
 						<?php endif ?>
 							<?php if ( ! empty( $child_menu_items ) ): ?>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo esc_url( $menu_item->url ); ?>"
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                   href="<?php echo esc_url( $menu_item->url ); ?>"
                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<?php echo esc_html( $menu_item->title ); ?>
                                 </a>

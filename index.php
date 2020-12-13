@@ -14,9 +14,9 @@ $is_active_blog_sidebar = is_active_sidebar( 'blog-sidebar' );
         <div class="row">
             <div class="col-md-<?php echo is_home() && $is_active_blog_sidebar ? 8 : 12; ?> col-sm-12">
 				<?php if ( have_posts() ): ?>
-                    <div class="row post-container">
+                    <div class="row post-container" data-masonry='{ "itemSelector": ".grid-item" }'>
 						<?php while ( have_posts() ): the_post(); ?>
-                            <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="col-lg-3 col-md-4 col-sm-12 grid-item">
 								<?php get_template_part( 'template-parts/content', 'blog' ); ?>
                             </div>
 						<?php endwhile; ?>
