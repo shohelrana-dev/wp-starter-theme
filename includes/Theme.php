@@ -9,7 +9,7 @@ namespace Theme;
 
 use Theme\Customizer\Customizer;
 use Theme\MetaBoxes\Page\HidePageTitle;
-use Theme\Plugins\PluginActivation;
+use Theme\PluginActivation\PluginActivation;
 use Theme\Setup\Assets;
 use Theme\Setup\Menus;
 use Theme\Setup\ThemeSupport;
@@ -26,6 +26,7 @@ final class Theme {
 		$this->define_constants();
 		$this->includes();
 		$this->setup_theme();
+		$this->plugin_activation();
 		$this->meta_boxes();
 		$this->customizer();
 	}
@@ -65,7 +66,7 @@ final class Theme {
 		Customizer::get_instance();
 	}
 
-	public function meta_boxes () {
+	private function meta_boxes () {
 		HidePageTitle::get_instance();
 	}
 

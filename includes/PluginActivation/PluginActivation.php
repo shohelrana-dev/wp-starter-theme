@@ -1,6 +1,6 @@
 <?php
 
-namespace Theme\Plugins;
+namespace Theme\PluginActivation;
 
 class PluginActivation {
 	use \Theme\Traits\Singleton;
