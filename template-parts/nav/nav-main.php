@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme
+ * Th nav main file
  *
  * @package wp-starter-theme
  */
