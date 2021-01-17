@@ -32,17 +32,17 @@ class Customizer {
 
 	public function load_panels () {
 		//Load panels
-		\Theme\Customizer\Panels\Theme_Options::get_instance();
-		//\Theme\Customizer\Panels\Front_Page::get_instance();
+		Panels\ThemeOptions::get_instance();
+		//Panels\FrontPage::get_instance();
 	}
 
 	public function load_sections () {
 		//Theme option sections
-		\Theme\Customizer\Sections\Theme_Options\Typography::get_instance();
+		Sections\ThemeOptions\Typography::get_instance();
 
 		//Front page sections
-		/*\Theme\Customizer\Sections\Front_Page\Sortable::get_instance();
-		\Theme\Customizer\Sections\Front_Page\Hero::get_instance();*/
+		Sections\FrontPage\Sortable::get_instance();
+		Sections\FrontPage\Hero::get_instance();
 	}
 
 }

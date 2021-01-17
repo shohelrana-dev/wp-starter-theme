@@ -13,7 +13,7 @@ trait Singleton {
 	 *
 	 * @var array
 	 */
-	static $instance = [];
+	private static $instance = [];
 
 	/**
 	 * Get the class instance

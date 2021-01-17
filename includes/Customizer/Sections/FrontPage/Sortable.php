@@ -5,11 +5,11 @@
  * @package wp-starter-theme
  */
 
-namespace Theme\Customizer\Sections\Front_Page;
+namespace Theme\Customizer\Sections\FrontPage;
 
-use Theme\Customizer\Panels\Front_Page;
+use Theme\Customizer\Panels\FrontPage;
 
-class Sortable extends Front_Page {
+class Sortable extends FrontPage {
     private $section     = 'sortable_front_page_sections';
 
     public function __construct() {

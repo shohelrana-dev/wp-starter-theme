@@ -35,7 +35,7 @@ class Assets {
 			],
 			'theme-style'        => [
 				'src'     => get_stylesheet_uri(),
-				'version' => filemtime( THEME_PATH . '/style.css' )
+				'version' => filemtime( THEME_DIR . '/style.css' )
 			]
 		];
 	}
@@ -56,14 +56,14 @@ class Assets {
 				'version' => THEME_VERSION,
 				'deps'    => [ 'jquery' ],
 			],
-			'macy-script'      => [
+			'masonry-script'      => [
 				'src'     => THEME_ASSETS . '/vendor/masonry/js/masonry.min.js',
 				'version' => THEME_VERSION,
 				'deps'    => [ 'jquery' ],
 			],
 			'custom-script'    => [
 				'src'     => THEME_ASSETS . '/js/custom.js',
-				'version' => filemtime( THEME_PATH . '/assets/js/custom.js' ),
+				'version' => filemtime( THEME_DIR . '/assets/js/custom.js' ),
 				'deps'    => [ 'jquery' ],
 			]
 		];

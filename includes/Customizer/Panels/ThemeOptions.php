@@ -1,6 +1,6 @@
 <?php
 /**
- * Front_Page class file for customizer
+ * FrontPage class file for customizer
  *
  * @package wp-starter-theme
  */
@@ -9,7 +9,7 @@ namespace Theme\Customizer\Panels;
 
 use Theme\Customizer\Customizer;
 
-class Theme_Options extends Customizer {
+class ThemeOptions extends Customizer {
     protected $panel = 'theme_typography_panel';
 
     public function __construct() {

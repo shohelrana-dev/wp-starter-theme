@@ -5,11 +5,11 @@
  * @package wp-starter-theme
  */
 
-namespace Theme\Customizer\Sections\Front_Page;
+namespace Theme\Customizer\Sections\FrontPage;
 
-use Theme\Customizer\Panels\Front_Page;
+use Theme\Customizer\Panels\FrontPage;
 
-class Hero extends Front_Page {
+class Hero extends FrontPage {
     protected $section     = 'front_page_hero_section';
     protected $option_name = 'front_page_hero_section';
 

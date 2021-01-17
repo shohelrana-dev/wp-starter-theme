@@ -1,6 +1,5 @@
 <?php
-/**
- * Theme_Support class file
+/**add_theme_support() class file
  *
  * @package wp-starter-theme
  */
@@ -9,7 +8,7 @@ namespace Theme\Setup;
 
 use Theme\Traits\Singleton;
 
-class Theme_Support {
+class ThemeSupport {
 	use Singleton;
 
 	protected function __construct () {

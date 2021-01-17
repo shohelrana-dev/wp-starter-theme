@@ -5,11 +5,11 @@
  * @package wp-starter-theme
  */
 
-namespace Theme\Customizer\Sections\Theme_Options;
+namespace Theme\Customizer\Sections\ThemeOptions;
 
-use Theme\Customizer\Panels\Theme_Options;
+use Theme\Customizer\Panels\ThemeOptions;
 
-class Typography extends Theme_Options {
+class Typography extends ThemeOptions {
     protected $section     = 'typography';
     protected $option_name = 'typography';
 

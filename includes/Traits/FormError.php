@@ -8,13 +8,13 @@ namespace Theme\Traits;
  *
  * @package Theme\Traits
  */
-trait Form_Error {
+trait FormError {
 	/**
 	 * Holds the error
 	 *
 	 * @var array
 	 */
-	public $errors = [];
+	private $errors = [];
 
 	/**
 	 * check if the form has error
