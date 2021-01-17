@@ -1,6 +1,18 @@
 <?php
 
 /**
+ * Debug expression
+ *
+ * @param $expression
+ */
+function dd ( $expression ) {
+	echo '<pre>';
+	var_dump( $expression );
+	echo '</pre>';
+	wp_die();
+}
+
+/**
  * get nav menu items by menu location
  *
  * @param $location
